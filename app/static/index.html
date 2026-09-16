@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TawasolPay — AI Cyber Risk Assistant</title>
+  <meta name="description" content="AI-powered cyber risk prioritisation for TawasolPay fintech — NIST 800-53 RAG guidance, CISA KEV correlation, and multi-factor risk scoring." />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="/static/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡</text></svg>" />
+</head>
+<body>
+
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-logo" aria-hidden="true">🛡</div>
+          <div class="brand-text">
+            <h1>TawasolPay</h1>
+            <p>AI Cyber Risk Intelligence</p>
+          </div>
+        </div>
+        <div class="header-meta">
+          <div class="status-badge" id="status-badge" role="status" aria-live="polite">
+            <span class="status-dot" id="status-dot"></span>
+            <span id="status-text">Ready</span>
+          </div>
+          <div class="status-badge" id="timestamp-badge" style="display:none">
+            <span>🕐</span>
+            <span id="gen-time">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-badge" aria-label="MDR Advisory Alert">
+        🚨 MDR Advisory Active — April 2026
+      </div>
+      <h2 id="hero-heading">Ranked Cyber Risk<br/>Intelligence Report</h2>
+      <p>
+        Multi-factor risk scoring across 60 assets, 114 vulnerabilities, and 40 active threat campaigns —
+        grounded in NIST SP 800-53 Rev. 5 and CISA KEV.
+      </p>
+      <button
+        id="btn-analyze"
+        class="btn-analyze"
+        onclick="startAnalysis()"
+        aria-label="Run AI risk analysis"
+      >
+        <span class="btn-icon" id="btn-icon">⚡</span>
+        <span id="btn-text">Run Risk Analysis</span>
+      </button>
+    </section>
+
+    <section class="stats-bar" id="stats-bar" aria-label="Summary statistics" style="display:none">
+      <div class="stat-card">
+        <div class="stat-value" id="stat-assets">—</div>
+        <div class="stat-label">Assets Scanned</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-vulns">—</div>
+        <div class="stat-label">Vulnerabilities</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-intel">—</div>
+        <div class="stat-label">Threat Intel Records</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-duration">—</div>
+        <div class="stat-label">Analysis Time (s)</div>
+      </div>
+    </section>
+
+    <section
+      class="progress-panel"
+      id="progress-panel"
+      aria-label="Analysis progress log"
+      aria-live="polite"
+    >
+      <div class="progress-header">
+        <span>⚙</span>
+        Pipeline Progress
+      </div>
+      <div class="progress-log" id="progress-log" role="log"></div>
+    </section>
+
+    <section class="risks-section" aria-labelledby="risks-heading">
+      <div class="section-header" id="risks-header" style="display:none">
+        <div>
+          <h2 class="section-title" id="risks-heading">
+            🎯 Top 5 Prioritised Risks
+          </h2>
+          <p class="section-subtitle" id="risks-subtitle">Ranked by composite risk score — not CVSS alone</p>
+        </div>
+        <button
+          id="btn-rerun"
+          class="btn-analyze"
+          onclick="startAnalysis()"
+          style="padding: 10px 20px; font-size: 13px;"
+          aria-label="Re-run risk analysis"
+        >
+          <span>🔄</span> Re-run Analysis
+        </button>
+      </div>
+
+      <div class="risks-grid" id="risks-grid" role="list" aria-label="Risk cards">
+        <div class="empty-state" id="empty-state" role="status">
+          <span class="emoji">🛡️</span>
+          <h3>Ready to Analyse</h3>
+          <p>Click "Run Risk Analysis" to ingest all data sources, score vulnerabilities, and retrieve NIST 800-53 guidance.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <strong>TawasolPay AI Cyber Risk Assistant</strong> &nbsp;·&nbsp;
+      NIST SP 800-53 Rev. 5 &nbsp;·&nbsp;
+      CISA KEV &nbsp;·&nbsp;
+      Groq Llama 3.1 70B &nbsp;·&nbsp;
+      ChromaDB + sentence-transformers
+      <br /><br />
+      <span style="color: var(--text-muted); font-size: 11px;">
+        Synthetic data for assessment purposes only. Not for operational security decisions.
+      </span>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" style="display:none" role="alert" aria-live="assertive"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

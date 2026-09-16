@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+pandas
+requests
+openpyxl
+sentence-transformers
+chromadb
+groq
+tqdm
+python-multipart
+aiofiles
+numpy
